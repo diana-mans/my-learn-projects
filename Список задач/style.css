@@ -1,0 +1,31 @@
+html, body {
+	margin: 20px;
+}
+
+header {
+	font-size: 25px;
+}
+
+textarea {
+	width: 300px;
+	height: 100px;
+	font-size: 14px;
+}
+
+#container {
+	display: flex;
+	justify-content: space-between;
+}
+
+#taskes {
+	width: 300px;
+}
+
+#add {
+	width: 100px;
+	height: 30px;
+}
+
+#taskes p {
+	cursor: pointer;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Количество нажатий</title>
+	<meta charset="utf-8">
+	<script>
+
+		function makeCounter1() {
+			var currentCount = 1;
+			return function() {
+				var elem = document.getElementById('min1');
+				elem.innerHTML = currentCount;
+				return currentCount++;
+			}
+		};
+
+		function makeCounter2() {
+			var currentCount = 1;
+			return function() {
+				var elem = document.getElementById('min2');
+				elem.innerHTML = currentCount;
+				return currentCount++;
+			}
+		};
+
+		var counter1 = makeCounter1();
+		var counter2 = makeCounter2();
+		
+		
+	</script>
+</head>
+<body>
+	<button onclick="counter1()" id="min1" style="width: 40px; height: 30px; margin: 10px; background-color: red">0</button>
+	<button onclick="counter2()" id="min2" style="width: 40px; height: 30px; background-color: green">0</button>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<script>
+	
+	function makeCounter() {
+		var currentCount = 1;
+		return function() {
+			return currentCount++;
+		}
+	};
+
+	var counter = makeCounter();
+
+	console.log(counter());
+	console.log(counter());
+	console.log(counter());
+
+	var counter2 = makeCounter();
+	console.log(counter2());
+
+</script>

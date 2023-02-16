@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<script>
+
+	//setInterval = window.setInterval
+	//setTimeout = window.setTimeOut
+
+	function sayHello(name) {
+		console.log('Привет, ' + name);
+	};
+
+	setTimeout(sayHello, 3000, 'Егор');
+	//первый парамент - функция, второй - время, третий - какие угодные параметры для функции (можно без третьего)
+
+	var car = {
+
+		go: function() {
+			console.log('Поехали!');
+		},
+
+		start: function() {
+			console.log('Заводимся');
+
+			function sayGoLater() {
+				this.go();
+			}
+
+			sayGoLater = sayGoLater.bind(this);
+
+			setTimeout(sayGoLater, 1000);
+		}
+	};
+
+	car.start();
+	
+</script>

@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<script>
+	'use strict'
+
+	function filterByType() {
+		var args = [...arguments]; //преобразовали в массив
+		var rightArgs = [];
+		var i = 1;
+
+		while (i <= args.length) {
+			if (typeof(args[i]) === args[0]) {
+				rightArgs.push(args[i]);
+			}
+			i++;
+		}
+	
+		
+		return rightArgs;
+	}
+
+	console.log(filterByType('string', 'rain', true, 'sun', 1, 'rainbow', false, 2, 76, 'kitty'));
+	var b = 'house';
+
+	
+
+</script>

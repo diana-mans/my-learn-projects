@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<script>
+
+	function Users(firstName, lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		regDate = new Date;
+		RegUsers();
+	};
+
+	function RegUsers() {
+		users.push(this.firstName + ' ' + this.lastName + ' ' + this.regDate);
+		getAllUsers = function() {
+			return users;
+		}
+	};
+
+	var users = [];
+
+	while (newUser =! null) {
+		var newUser = prompt('Введите ваше имя и фамилию');
+		if (!newUser) break
+		newUser = newUser.split(' ');
+		Users(newUser[0], newUser[1]);
+	}
+
+	console.log(getAllUsers());
+
+	
+</script>

@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<script>
+	var car1 = {
+		mark: 'BMW',
+		model: 'X5',
+		year: 2010
+	};
+
+	var car2 = {
+		mark: 'Mercedes Benz',
+		model: 'SLK',
+		year: 2012,
+		price: 1500000,
+	};
+
+	function printObjectProps(obj) {
+		for (var prop in obj) { //специальная форма
+			if( obj.hasOwnProperty(prop)) { //чтобы ничего лишнего не выдал
+				var propValue = obj[prop];
+				console.log(prop + ': ' + propValue);
+			}
+		}
+	}
+
+	printObjectProps(car1);
+	printObjectProps(car2);
+
+	var car3 = {};
+	//копируем свойства из 2 в 3, но при их изменениях в одном объекте, в другом объекте ничего не поменяется (они независимы)
+	for (var prop in car2) {
+		var propValue = car2[prop];
+		car3[prop] = propValue;
+	}
+
+
+
+</script>

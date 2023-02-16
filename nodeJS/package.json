@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "name": "hello-nodejs",
+  "version": "1.0.0",
+  "description": "Simple program in JavaScript for node.js",
+  "main": "hello.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hello",
+    "node.js"
+  ],
+  "author": "Diana Mansurova",
+  "license": "MIT"
+}

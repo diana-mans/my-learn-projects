@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+<script>
+
+	//Регулярные выражения - это такие выражения, которые позволяют проверять строку на соответствие определенному шаблону или формату.
+	//Regular Expressions
+	//Мы кратко коснемся
+
+	console.log('1) ищем наличие определенного символа');
+	console.log(/1/.test('1')); //true
+	console.log(/1/.test('19')); //true
+	console.log(/1/.test('3')); //false
+	console.log(/п/.test('крепость')); //true
+
+
+
+	console.log('2) Встречаются ли числовые значения');
+	console.log(/\d/.test('5')); //true
+	console.log(/\d/.test('a')); //false
+	console.log(/\d/.test('777 фиы 2')); //true
+
+
+	console.log('3) Встречается ли (в данном случае) ТРИ числовых значения подряд в выражении');
+	console.log(/\d{3}/.test('543')); //true
+	console.log(/\d{3}/.test('54в74')); //false
+	console.log(/\d{3}/.test('абв 9708273')); //true
+
+
+	//Проверка корректности ввода номера телефона
+	var phone = prompt('Введите номер телефона в формате XXX-XX-XX: ');
+	var isValidPhone = /\d{3}-\d{2}-\d{2}/.test(phone);
+
+	if (isValidPhone) {
+		alert('Мы вам перезвоним');
+	} else {
+		alert('Ошибка ввода номера (неправильный формат)');
+	}
+
+	//Можно заменить все цифры в строке на что-то другое
+	var str = 'Я родился 12 числа 12 месяца 2012 года';
+	console.log(str.replace(/\d/g, '_')); //Я родился __ числа __ месяца ____ года
+
+
+	
+</script>

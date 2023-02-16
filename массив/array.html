@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<script>
+	
+	var cities = ['Москва', 'Санкт-Петербург', 'Казань'];
+	console.log('Массив (cities): ' + cities);
+	console.log('длина массива (cities.length): ' + cities.length);
+	cities.push('Екатеринбург');
+	console.log('Добавили Екатеринбург в конец (cities.push): ' + cities);
+
+	cities.pop();
+	console.log('Удалили последний элемент (cities.pop): ' + cities);
+	// Добавить в начало .unshift(), удалить из начала .shift()
+
+	cities.reverse();
+	console.log('Развернули массив (cities.reverse): ' + cities);
+
+	var numbers1 = [2, 7, 5, 1];
+	var numbers2 = [9, 3, 8];
+	console.log('Первый массив из чисел: ' + numbers1);
+	console.log('Второй массив из чисел: ' + numbers2);
+	numbers3 = numbers1.concat(numbers2);
+	console.log('Объединили эти два массива (numbers1.concat(numbers2)): ' + numbers3);
+	numbers3.sort();
+	console.log('Отсортировали числа (numbers3.sort): ' + numbers3);
+
+	console.log('Объединили массив в одну строку (cities.join( )): ' + cities.join(', ')); 
+	// но нужно дополнительно сохранить
+
+	console.log('Получаем часть массива от 1 до 2 (cities.splice): ' + cities.splice(1, 2)); 
+	console.log('Позиция элемента Казань (cities.indexOf): ' + cities.indexOf('Казань')); 
+
+</script>

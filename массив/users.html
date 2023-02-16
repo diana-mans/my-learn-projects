@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Вход в личный кабинет</title>
+	<meta charset="utf-8">
+	<script>
+		
+		var registeredUsers = [
+			{
+				name: 'Диана',
+				login: 'diana07',
+				password: 'popa'
+			},
+			{
+				name: 'Мартин',
+				login: 'martin',
+				password: 'oralcumshot'
+			}
+		]
+
+		function clickListener() {
+			const form = document.querySelector("form");
+			const inputs = form.elements;
+			userLogin = inputs["Login"].value;
+			userPassword = inputs["Password"].value;
+
+			for (var i = 0; i <= registeredUsers.length; i++) {
+				if (userLogin == registeredUsers[i].login && userPassword == registeredUsers[i].password) {
+					alert('Добрый день, ' + registeredUsers[i].name);
+					break;
+				} else if (i == registeredUsers.length) {
+					alert('Неверно введены логин или пароль');
+				}
+			}
+		};
+
+
+	</script>
+</head>
+<body>
+	<form style="margin: 40px">
+		<h3>Введите свои данные для входа в личный кабинет</h3>
+		<input type="text" name="Login" placeholder="login" /><br><br>
+		<input type="password" name="Password" placeholder="password" /><br><br>
+		<button onclick ="clickListener()">Log In</button>
+	</form>
+</body>
+</html>

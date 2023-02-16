@@ -1,0 +1,35 @@
+html, body {
+	background-color: #505051;
+	text-align: center;
+	padding: 20px;
+}
+
+h1 {
+	color: #ffffff;
+	margin-bottom: 10px;
+}
+
+.container {
+	background-color: white;
+	width: 500px;
+	height: 300px;
+	margin: 0 auto;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+p {
+	font-size: 23px;
+}
+
+.btn {
+	margin-bottom: 20px;
+	width: 200px;
+}
+
+img {
+	width: 502px;
+	margin-top: 20px;
+}

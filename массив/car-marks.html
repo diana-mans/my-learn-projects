@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<script>
+
+	var cars = [
+		'BMW', 'Mercedes', 
+		'Ford', 'HUMMER',
+		'Tayota', 'Honda'
+	];
+
+	console.log('Выводим по одному значения из массива , потом длину всего массива');
+	console.log( cars[0] );
+	console.log( cars[1] );
+	console.log( cars[2] );
+	console.log( cars.length );
+
+	console.log('Добавляем значение и выводим его и потом длину массива');
+	cars.push('Opel');
+	console.log( cars[6] );
+	console.log( cars );
+	console.log('Удаляем значение и выводим новую длину массива');
+	cars.splice(6, 1); // начиная с позиции 6, удалить 1 элемент
+	console.log( cars );
+
+	console.log('Выводим все значения из массива');
+	for (var i = 0; i < cars.length; i++) {
+		console.log( cars[i] );
+	}
+
+	// еще можно создать массив из объектов
+	var cars1 = [
+		{
+			mark: 'BMW',
+			model: 'X5'
+		},
+		{
+			mark: 'Mercedes',
+			model: 'SLK'
+		}
+	];
+
+	console.log('Выводим все значения марок объектов из массива');
+	for (var i = 0; i < cars1.length; i++) {
+		console.log( cars1[i].mark );
+	}
+	
+
+</script>

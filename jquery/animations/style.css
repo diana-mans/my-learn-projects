@@ -1,0 +1,32 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+h1, h3 {
+	text-align: center;
+	margin-top: 40px;
+}
+
+img {
+	width: 180px;
+	margin: 20px auto;
+	position: relative;
+}
+
+.container {
+	margin: 20px;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+}
+
+button {
+	margin: 5px auto;
+}
+
+.row div {
+	flex-basis: 220px;
+}

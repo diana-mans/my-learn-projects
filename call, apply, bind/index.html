@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<script>
+
+	function User(firstName, lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName; 
+	};
+
+	var myUser = new User('Диана', 'Мансурова');
+	var anotherUser = new User('Иван', 'Иванов');
+
+	function getFullName(prefix, suffix) {
+		return prefix
+		+ ', '
+		+ this.firstName 
+		+ ' ' 
+		+ this.lastName
+		+ suffix;
+	};
+	
+	console.log(getFullName.call(myUser, 'Привет', '!')); //первый параметр - это контекст
+	console.log(getFullName.apply(myUser, ['Привет', '!'])); //apply использует массивы
+
+	//привязка к контексту bind
+
+	var a = {
+		name: 'foo',
+		getName: function() {
+			return this.name
+		}
+	};
+
+	var b = {
+		name: 'bar',
+		getName: a.getName.bind(a)
+		//теперь this.name берется из контекста объекта а
+		//без bind name брался бы из объекта b
+	}
+
+</script>

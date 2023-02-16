@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<script>
+
+	//Базовая (родительская) функция-конструктор
+	function User(firstName, lastName) {
+		this.getFullName = function() {
+			return firstName + ' ' + lastName;
+		}
+	}
+
+	//Дочерняя функция-конструктор
+	function Manager(firstName, lastName) {
+		User.apply(this, arguments); //наследует все, что есть в User
+		this.sayHello = function() {
+			alert('Питух');
+		}
+	}
+
+	var u = new User('Даня', 'Поперечный');
+	var m = new Manager('Юлия', 'Гаврилина');
+
+	// Мы !скопировали! весь функцияонал из родительского конструктора в дочерний в контексте дочернего
+	
+</script>

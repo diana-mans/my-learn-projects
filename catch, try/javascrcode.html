@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<script>
+	'use strict';
+
+	var jscode = prompt('Введите JS код:');
+
+	try {
+		var json = eval(jscode); //преобразовали строку в код
+	} catch (ex) {
+		alert('Возникла ошибка: ' + ex);
+	}
+	
+</script>

@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<script>
+	console.log('длина строки hello');
+	console.log('hello'.length);
+
+	var str = 'корова';
+	console.log('индекс буквы О в слове корова, начиная от 0');
+	console.log(str.indexOf('о'));
+	console.log('индекс буквы В в слове корова');
+	console.log(str.indexOf('в'));
+	console.log('последнее вхождение строки О');
+	console.log(str.lastIndexOf('о'));
+
+	console.log('Меняем все буквы О на А без сохранения');
+	console.log(str.replace(/о/g, 'а')); 
+
+	console.log('Выделяем часть строки от 2 до 5 методом slice');
+	console.log(str.slice(2, 5));
+
+	console.log('Возвращем часть строки от 2 до 5 методом substring');
+	console.log(str.substring(2, 5))
+
+	var cities = 'Москва, Санкт-Петербург, Казань';
+	console.log('Разделаем по запятым с пробелами');
+	console.log(cities.split(', '));
+
+	var surname = 'Мансурова';
+	console.log('Верхний и нижний регистр Мансурова');
+	console.log(surname.toUpperCase());
+	console.log(surname.toLowerCase());
+
+	var name = '   Диана';
+	console.log('Убираем ненужные пробелы');
+	console.log(name);
+	console.log(name.trim()); //еще есть trimLeft и trimRight
+
+	//эта вся фигня не сохраняет
+	// если хотим сохранить, то пишем например
+	// str = str.trim()
+
+</script>

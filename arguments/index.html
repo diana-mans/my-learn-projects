@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<script>
+
+// аргументы - это псевдо-массив, то есть это объект, похожий на массив: с длиной и индексами. Ниже приводится три метода, которые позволяют преобразовать аргументы в настоящий массив
+	function showArgs() {
+		// ES5 
+		var args = Array.prototype.slice.call(arguments);
+
+		// ES6
+		var args = Array.from(arguments);
+		var args = [...arguments]; //spread operator
+
+		return args.join(', ');
+	}
+
+	console.log(showArgs('foo', 'bar', 'hello'));
+	
+</script>

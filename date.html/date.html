@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<script>
+	
+	var d = new Date();
+	console.log('Дата сейчас: ' + d);
+	console.log('День недели: ' + d.getDay()); //0 - это вс
+	console.log('День месяца: ' + d.getDate());
+	console.log('Месяц (0 - январь): ' + d.getMonth());
+	console.log('Год: ' + d.getFullYear());
+	console.log('Сколько часов: ' + d.getHours());
+	console.log('Сколько минут: ' + d.getMinutes());
+	console.log('Сколько секунд: ' + d.getSeconds());
+	console.log('Сколько миллисекунд: ' + d.getMilliseconds());
+
+
+	var letterHours;
+	if (d.getHours() == 1 || d.getHours() == 21) {
+		letterHours = ' час ';
+	} else if (d.getHours() > 1 && d.getHours() < 5 || d.getHours() > 21 && d.getHours() < 25) {
+		letterHours = ' часа ';
+	} else {
+		letterHours = ' часов ';
+	};
+
+	var months = [
+		'января', 
+		'февраля', 
+		'марта', 
+		'апреля', 
+		'мая', 
+		'июня', 
+		'июля', 
+		'августа', 
+		'сентября', 
+		'октября', 
+		'ноября', 
+		'декабря'
+	];
+
+	alert('Сейчас ' + d.getHours() + letterHours + d.getMinutes() + ' минут ' + d.getDate() + ' числа ' + months.slice(d.getMonth(), (d.getMonth() +1)) + ' ' + d.getFullYear() + ' года');
+
+</script>

@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<script>
+	//Immediately Invoked Function Expression
+
+	(function() {
+		var localVar = 100;
+
+		window.foo = function() {
+			console.log(localVar++);
+		}
+	})();
+
+
+</script>
